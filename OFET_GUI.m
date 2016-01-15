@@ -260,7 +260,7 @@ varargout{1} = handles.output;
         if isnan(Max)==1
             Max=Inf
         end
-        if isnana(Min)==1
+        if isnan(Min)==1
             Min=0
         end
         
@@ -278,7 +278,7 @@ varargout{1} = handles.output;
          if isnan(Max)==1
             Max=Inf
         end
-        if isnana(Min)==1
+        if isnan(Min)==1
             Min=0
         end
         handles.Constants.PDI=[Min Max]
@@ -314,7 +314,7 @@ varargout{1} = handles.output;
                  if isnan(Max)==1
             Max=Inf
         end
-        if isnana(Min)==1
+        if isnan(Min)==1
             Min=0
         end
                 handles.Constants.InitConc=[Min Max]
@@ -330,7 +330,7 @@ varargout{1} = handles.output;
          if isnan(Max)==1
             Max=Inf
         end
-        if isnana(Min)==1
+        if isnan(Min)==1
             Min=0
         end
                 Min=str2double(get(handles.InitConc_Min, 'String'))
