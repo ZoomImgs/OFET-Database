@@ -25,46 +25,32 @@ function [MobSort, GroupSort, Filtered] = OFETSearch(Constants,Variable)
 
 load('OFETDatabase.mat');
 
-Filtered = OFET; % Start with the full structure
+% Keep the devices that satisfy all the constants
 
-NumConst = size(Constants,1); % How many constraints are there
-if NumConst>0
-    for c = 1:NumConst
-        Field = Constants{c,1};
-        HoldValue = Constants{c,2};
-        Filtered = OFETFilter(Filtered,Field,HoldValue);
-    end
+Filtered = OFETFilter(OFET,Constants);
+
+% If this variable is only NaN's and Numbers, Use OFETNumVar, else use
+% OFETTextVar
+
+if isnumeric([Filtered(:).(Variable)])
+    [MobSort, GroupSort] = OFETNumVar(Filtered,Variable);
 else
+    [MobSort, GroupSort] = OFETTextVar(Filtered,Variable);
 end
+
+end
+
+function [MobSort, GroupSort] = OFETNumVar(Filtered,Variable)
 
 % Remove Devices that don't have a reported value for "Variable"
 
 Filtered = RemoveNans(Filtered,Variable);
-Groups = cell(length(Filtered),1);
+Groups = zeros(length(Filtered),1);
 Mobs = zeros(length(Filtered),1);
 
-if isnumeric(Filtered(1).(Variable))
-    numeric = true;
-else
-    numeric = false;
-end
-
-if numeric
-    Groups = zeros(length(Filtered),1);
-else
-    Groups = cell(length(Filtered),1);
-end
-
-if numeric
-    for i = 1:length(Filtered)      % Build up the either numeric or string matrix 'Groups'
-        Groups(i,1) = Filtered(i).(Variable);
-        Mobs(i,1) = Filtered(i).RTMob;  % and the corresponding mobilities
-    end
-else
-    for i = 1:length(Filtered)      % Build up the either numeric or string matrix 'Groups'
-        Groups{i,1} = Filtered(i).(Variable);
-        Mobs(i,1) = Filtered(i).RTMob;  % and the corresponding mobilities
-    end
+for i = 1:length(Filtered)      % Build up the either numeric or string matrix 'Groups'
+    Groups(i,1) = Filtered(i).(Variable);
+    Mobs(i,1) = Filtered(i).RTMob;  % and the corresponding mobilities
 end
 
 % Sort the data so the variables are in increasing order
@@ -72,6 +58,32 @@ end
 [GroupSort, idx] = sort(Groups);    % sort the groups in ascending order
 MobSort = Mobs(idx,1);  % Also apply ths sorting to mobilities
 
-% [hScat,hMarks,ax] = GoodBox(GroupSort,MobSort);
+GoodScatter(GroupSort,MobSort);
+xlabel(Variable)
+ylabel('Mobility (cm^2/Vs)')
+
+end
+
+function [MobSort, GroupSort] = OFETTextVar(Filtered,Variable)
+
+% Insert 'None' for NaN values...
+
+Filtered = RemoveNanInsertNone(Filtered,Variable);
+Groups = cell(length(Filtered),1);
+Mobs = zeros(length(Filtered),1);
+
+for i = 1:length(Filtered)      % Build up the either numeric or string matrix 'Groups'
+    Groups{i,1} = Filtered(i).(Variable);
+    Mobs(i,1) = Filtered(i).RTMob;  % and the corresponding mobilities
+end
+
+% Sort the data so the variables are in increasing order
+
+[GroupSort, idx] = sort(Groups);    % sort the groups in ascending order
+MobSort = Mobs(idx,1);  % Also apply ths sorting to mobilities
+
+GoodBox(GroupSort,MobSort);
+xlabel(Variable)
+ylabel('Mobility (cm^2/Vs)')
 
 end
