@@ -4,7 +4,10 @@ function Updated = OFETFilter(Old,Constants)
 % Old: since multiple filters may be applied, this takes the *possibly*
 % already filtered structure array as an input. Thus 'old'
 %
-% ProcVar: a string specifying the ProcVar of Old that we're filtering
+% Constants: a structure with a field for each process variable, cell
+% arrays to specify text variables that should be held constant, vectors or
+% NaNs to specify where numerical variables should be held constant, or
+% empty arrays to specify 'no constraint'
 
 Updated=Old;            % Start with the full structure
 ProcVars = fieldnames(Old);

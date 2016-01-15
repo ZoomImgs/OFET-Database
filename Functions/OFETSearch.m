@@ -3,12 +3,21 @@ function [MobSort, GroupSort, Filtered] = OFETSearch(Constants,Variable)
 %OFET Search
 %
 % OFET Search is the grandaddy master function that takes all the marbles
-% Tell it what variables you want to be held constant at what value as a
-% cell array:
-% {'Process Field', 'Value';...
-%  'other process field', 'other value to hold constant'}
-% New: 'Value' can now be a vector with [LB, UB] if a range of values is
-% desired
+% 
+% Constants is a structure array to specify what process variables to hold
+% constant for a given search
+% Initialize Constants with:
+% Constants = GenerateEmptyConstants()
+% This creates an empty struct with fields the same as OFET Database
+% Fill it out like this:
+%
+% Ex. Constants.SubsTreat = {'HMDS','None'}
+% This would return devices with either HMDS or no surface modification
+%
+% Constants.Mn = [30 60] would return devices with Mn between 30 and 60
+%
+% Constants.SonicationTime = NaN would return devices that have not been
+% sonicated
 
 % And what variable you want to plot mobility against (must also be a valid process field):
 % 'Variable'
@@ -21,7 +30,7 @@ function [MobSort, GroupSort, Filtered] = OFETSearch(Constants,Variable)
 % 'Variable' values for the mobilities in 'MobSort'
 %
 % Filtered, a structure array with the devices that satisfy the specified
-% 'Constraints'
+% 'Constants'
 
 load('OFETDatabase.mat');
 
