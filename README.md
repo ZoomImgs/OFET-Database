@@ -3,6 +3,7 @@ Any use of this repository for research purposes must legally cite the paper in 
 
 ## Exploring the Database via GUI
 [Download](https://github.com/Imperssonator/OFET-Database/archive/master.zip) the repository to your MatLab active directory. (See "Download ZIP" at top right of [repository main page](https://github.com/Imperssonator/OFET-Database)
+
 Run the following command:
 
 OFET_GUI()
@@ -12,6 +13,7 @@ A window will pop up from which you can select process constraints and generate 
 
 ## Exploring the Database as a Table
 [Download](https://github.com/Imperssonator/OFET-Database/archive/master.zip) the repository to your MatLab active directory. (See "Download ZIP" at top right of [repository main page](https://github.com/Imperssonator/OFET-Database)
+
 Run the following command:
 
 load('Functions/OFETDatabase.mat')
