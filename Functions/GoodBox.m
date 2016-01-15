@@ -36,14 +36,13 @@ end
 ax.XTickMode = 'manual';
 ax.XTick = (1:max(xVals));
 ax.XTickLabels = xLabs;
-ax.FontSize=24;
+ax.FontSize=16;
 ax.YScale = 'log';
 ax.Box = 'on';
 ax.XTickLabelRotation = 40;
-ax.PlotBoxAspectRatio = [1 1 1];
 
 % Make Transparent Labels
-hScat.SizeData = 200;
+hScat.SizeData = 100;
 hMarks = hScat.MarkerHandle;
 hMarks.EdgeColorData = uint8([100; 100; 100; 175]);
 hMarks.FaceColorData = uint8([120; 120; 120; 150]);
