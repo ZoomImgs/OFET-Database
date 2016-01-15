@@ -1,6 +1,8 @@
 function [hScat,hMarks,ax] = ChanLenFig()
 
-[MobSort, GroupSort, Filtered] = OFETSearch({},'ChanLen');
+Constants = GenerateEmptyConstants();
+
+[MobSort, GroupSort, Filtered] = OFETSearch(Constants,'ChanLen');
 whos GroupSort
 disp(max(GroupSort))
 longestChan = max(GroupSort);

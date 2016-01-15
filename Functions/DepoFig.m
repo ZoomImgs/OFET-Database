@@ -1,6 +1,9 @@
 function [hScat,hMarks,ax] = DepoFig()
 
-[MobSort, GroupSort, Filtered] = OFETSearch({'ElectrodeMat','Au'},'Depo');
+Constants = GenerateEmptyConstants();
+Constants.ElectrodeMat={'Au'};
+
+[MobSort, GroupSort, Filtered] = OFETSearch(Constants,'Depo');
 
 [hScat,hMarks,ax] = GoodBox(GroupSort,MobSort);
 

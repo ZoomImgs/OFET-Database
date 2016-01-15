@@ -10,12 +10,11 @@ Updated=Old;            % Start with the full structure
 ProcVars = fieldnames(Old);
 
 for i = 1:length(ProcVars);
-    disp(length(Updated))
     if isempty(Constants.(ProcVars{i}))     % If no constraint for this variable, move onto next category
         
     else
         HoldVal = Constants.(ProcVars{i}); % This could be a vector range for numeric variables or a cell array of strings
-        
+            
         if iscell(HoldVal)          % If it's a cell array (meaning it is a text-based variable)
             NumDevs = length(Old);  % How many devices we started with
             Updated = struct();     % Going to rebuild the struct with only devices that satisfy HoldVals
@@ -40,12 +39,12 @@ for i = 1:length(ProcVars);
                 end
             end
             Updated = Old(KeepVec);
-            
+               
         else
             % Else, it's a numeric variable, in which case it will be held
             % at a value, a range, or NaN
             
-            if numel(HoldVal)==1
+            if numel(HoldVal)==1 || ischar(HoldValue)
                 NumDevs = length(Old);
                 Updated = struct();
                 if length(Old)<1
@@ -53,22 +52,21 @@ for i = 1:length(ProcVars);
                 end
                 
                 KeepVec = [];
-                if isnan(HoldVal)
-                    for d = 1:NumDevs
-                        if isnan(Old(d).(ProcVars{i}))
-                            KeepVec = [KeepVec d];
+                if isnan(HoldValue)
+                    for i = 1:NumDevs
+                        if isnan(Old(i).(Field))
+                            KeepVec = [KeepVec i];
                         end
                     end
                 else
-                    for d = 1:NumDevs
-                        if isequal(Old(d).(ProcVars{i}),HoldVal)
-                            KeepVec = [KeepVec d];
+                    for i = 1:NumDevs
+                        if isequal(Old(i).(Field),HoldValue)
+                            KeepVec = [KeepVec i];
                         end
                     end
                 end
                 
                 Updated = Old(KeepVec);
-                
             else
                 
                 NumDevs = length(Old);
@@ -87,9 +85,11 @@ for i = 1:length(ProcVars);
                 Updated = Old(KeepVec);
             end
             
+            disp(Updated)
+            disp(size(Updated))
+            Updated = nestedSortStruct2(Updated,{'Year','Author'});
+            Old = Updated;
         end
-        Updated = nestedSortStruct2(Updated,{'Year','Author'});
-        Old = Updated;
-    end
-    
+end
+
 end
