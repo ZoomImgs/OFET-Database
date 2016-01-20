@@ -6,7 +6,7 @@ Any use of this repository for research purposes must legally cite the paper in 
 # [Explore the Database](http://nbviewer.jupyter.org/github/Imperssonator/OFET-Database/blob/master/OpenOFET.ipynb)
 
 ## Exploring the Database via GUI
-[Download](https://github.com/Imperssonator/OFET-Database/archive/master.zip) the repository to your MatLab active directory. (See "Download ZIP" at top right of [repository main page](https://github.com/Imperssonator/OFET-Database)).
+[Download](https://github.com/Imperssonator/OFET-Database/archive/master.zip) the repository to your MatLab active directory.
 
 Run the following command:
 
@@ -16,7 +16,7 @@ Or simply right click on the file "OFET_GUI.m" and select "Run".
 A window will pop up from which you can select process constraints and generate plots of mobility against many different independent variables. Minor bugs may be encountered - close the GUI and restart it to reset all fields.
 
 ## Exploring the Database as Raw Data
-[Download](https://github.com/Imperssonator/OFET-Database/archive/master.zip) the repository to your MatLab active directory. (See "Download ZIP" at top right of [repository main page](https://github.com/Imperssonator/OFET-Database)).
+[Download](https://github.com/Imperssonator/OFET-Database/archive/master.zip) the repository to your MatLab active directory.
 
 Run the following command:
 
@@ -25,6 +25,6 @@ load('Functions/OFETDatabase.mat')
 The Database should now exist as a structure array called "OFET" in your workspace. Open it in the variable explorer to interact with the raw data.
 
 ## View individual papers as Excel sheets
-[Download](https://github.com/Imperssonator/OFET-Database/archive/master.zip) the repository to your MatLab active directory. (See "Download ZIP" at top right of [repository main page](https://github.com/Imperssonator/OFET-Database)).
+[Download](https://github.com/Imperssonator/OFET-Database/archive/master.zip) the repository to your MatLab active directory.
 
 Open the "Papers" folder, then open the folder for any author, and open the .xlsx file for that paper.
