@@ -6,6 +6,9 @@ Any use of this repository for research purposes must legally cite the paper in 
 # [Explore the Database](http://nbviewer.jupyter.org/github/Imperssonator/OFET-Database/blob/master/OFET-Table.ipynb)
 
 ## Create plots via MatLab GUI!
+
+![](https://github.com/Imperssonator/OFET-Database/blob/master/Functions/Figure%204.tif?raw=true)
+
 [Download](https://github.com/Imperssonator/OFET-Database/archive/master.zip) the repository to your MatLab active directory.
 
 Run the following command:
