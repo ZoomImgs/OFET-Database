@@ -7,7 +7,7 @@ Any use of this repository for research purposes must legally cite the paper in 
 
 ## Create plots via MatLab GUI!
 
-![](https://github.com/Imperssonator/OFET-Database/blob/master/Functions/Figure%204.tif?raw=true)
+![](https://drive.google.com/file/d/0B3N2dpYx53sjQmJXWmV4RDM3c3c/view?usp=sharing)
 
 [Download](https://github.com/Imperssonator/OFET-Database/archive/master.zip) the repository to your MatLab active directory.
 
