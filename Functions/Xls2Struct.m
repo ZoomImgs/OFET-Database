@@ -4,6 +4,7 @@ function OFET = Xls2Struct(DirectoryPath)
 % it
 
 [NN, TT, Directory] = xlsread([DirectoryPath '/Directory.xlsx']);
+Build_Solv_Lib();
 
 MainPath = Directory{2,2};
 FileNames = Directory(3:end,1);

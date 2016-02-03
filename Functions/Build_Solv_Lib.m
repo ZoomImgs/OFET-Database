@@ -1,4 +1,4 @@
-clc
+function [] = Build_Solv_Lib()
 
 [ndata, text, alldata] = xlsread('Solvs.xlsx'); % all cells in spreadsheet saved as cell arrays in "alldata"
 [m1,n1] = size(alldata);
@@ -16,3 +16,5 @@ for i = 1:m1
 end
 
 save('SolvLib.mat','SolvLib')
+
+end
