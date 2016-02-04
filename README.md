@@ -2,8 +2,8 @@
 Any use of this repository for research purposes must legally cite the paper in which it was introduced.
 
 # Exploring the Database Online
-### OFET Database is viewable as a table with interactive filtering and sorting!
-# [Explore the Database](http://nbviewer.jupyter.org/github/Imperssonator/OFET-Database/blob/master/OFET-Table.ipynb)
+OFET Database is viewable as a table with interactive filtering and sorting, via this link:
+### [Explore the Database](http://nbviewer.jupyter.org/github/Imperssonator/OFET-Database/blob/master/OFET-Table.ipynb)
 
 ## Create plots via MatLab GUI!
 
