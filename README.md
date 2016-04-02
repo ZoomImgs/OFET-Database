@@ -31,3 +31,13 @@ The Database should now exist as a structure array called "OFET" in your workspa
 [Download](https://github.com/Imperssonator/OFET-Database/archive/master.zip) the repository to your MatLab active directory.
 
 Open the "Papers" folder, then open the folder for any author, and open the .xlsx file for that paper.
+
+### Disclaimer Statement
+This database of organic field effect transistor processing and property data was compiled
+by Nils Persson and Michael McBride at the Georgia Institute of Technology. The authors used their best efforts to deliver a
+high quality copy of the Database and to verify that the data contained therein have been selected on
+the basis of sound scientific judgment. However, the authors make no warranties to that effect, and
+shall not be liable for any damage that may result from errors or omissions in the Database.
+The Database contains references and links to other web sites because they may have information that
+would be of interest to users. No inferences should be drawn on account of other sites being referenced,
+or not, from this page.
