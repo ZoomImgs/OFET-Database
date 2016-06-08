@@ -5,9 +5,7 @@ Any use of this repository for research purposes must legally cite the paper in 
 OFET Database is viewable as a table with interactive filtering and sorting, via this link:
 ### [Explore the Database](http://nbviewer.jupyter.org/github/Imperssonator/OFET-Database/blob/master/OFET-Table.ipynb)
 
-## Create plots via MatLab GUI!
-
-![](https://drive.google.com/file/d/0B3N2dpYx53sjQmJXWmV4RDM3c3c/view?usp=sharing)
+## Create plots via MatLab GUI
 
 [Download](https://github.com/Imperssonator/OFET-Database/archive/master.zip) the repository to your MatLab active directory.
 
