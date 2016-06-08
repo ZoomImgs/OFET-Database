@@ -30,6 +30,32 @@ The Database should now exist as a structure array called "OFET" in your workspa
 
 Open the "Papers" folder, then open the folder for any author, and open the .xlsx file for that paper.
 
+## Add/Edit a paper
+
+#### If you use Git:
+* Clone the repository and make your own branch
+* Create your own folder in the folder "Papers" and generate your process spreadsheet following the instructions below
+* Commit changes to your branch
+* Submit a pull request so your changes can be merged back to the master branch
+
+#### If you don't use Git:
+* [Download](https://github.com/Imperssonator/OFET-Database/archive/master.zip) the repository to your local machine
+* Create your own folder in the folder "Papers" and generate your process spreadsheet following the instructions below
+* Email to npersson3@gatech.edu
+
+### How to Add a New Paper
+* Create a new folder in the folder "Papers" and name it "<First Author's Last Name> <Year of Publication>"
+* From the main folder, copy "New Paper Template.xlsx" and add it to your new folder in "Papers"
+* Each column in this spreadsheet represents one device
+* Each row stores one piece of process information, such as the number average molecular weight of your starting material (Mn)
+* Fill in as much information as you can - blank rows are common and perfectly acceptable
+* Please use the units specified for each row, which can be found in "Process Variables.xlsx" in the main folder
+* For categorical variables such as "solvent", choose from the listed options in "Process Variables.xlsx"
+* Spelling and capitalization are important for categorical variables
+
+* Take a look at some of the other papers' spreadsheets as an example
+
+
 ### Disclaimer Statement
 This database of organic field effect transistor processing and property data was compiled
 by Nils Persson and Michael McBride at the Georgia Institute of Technology. The authors used their best efforts to deliver a
