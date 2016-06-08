@@ -44,7 +44,7 @@ Open the "Papers" folder, then open the folder for any author, and open the .xls
 * Email to npersson3@gatech.edu
 
 ### How to Add a New Paper
-* Create a new folder in the folder "Papers" and name it "<First Author's Last Name> <Year of Publication>"
+* Create a new folder in the folder "Papers" and name it "\<First Author's Last Name> \<Year of Publication>"
 * From the main folder, copy "New Paper Template.xlsx" and add it to your new folder in "Papers"
 * Each column in this spreadsheet represents one device
 * Each row stores one piece of process information, such as the number average molecular weight of your starting material (Mn)
