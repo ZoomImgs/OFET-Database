@@ -1,4 +1,4 @@
-###Welcome to the OFET Database GitHub Repository!
+###Welcome to the OFET Database GitHub Repository
 Any use of this repository for research purposes must legally cite the paper in which it was introduced.
 
 # Exploring the Database Online
